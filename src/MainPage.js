@@ -1,11 +1,9 @@
 import * as React from "react";
 
 const MainPage = () => {
-  return(
-   <>
-  
-  </>
-  );
+
+  return <>
+  </>;
 };
 
 export default MainPage;
