@@ -1,7 +1,13 @@
 import * as React from "react";
-import { Typography, Grid, Button } from "@mui/material";
+import { Typography, Grid, Button, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-
+import visacard1 from "../src/images/visacard1.png";
+// import visacard2 from "../src/images/visacard2.png";
+// import visacard3 from "../src/images/visacard3.png";
+import pay from "../src/images/pay.PNG";
+import mobpay from "../src/images/mobpay.png";
+import howtopay from "../src/images/howtopay.png";
+import graphpay from "../src/images/graphpay.PNG";
 import { ArrowForwardIos } from "@mui/icons-material";
 const useStyles = makeStyles({
   ArrowSize: {
@@ -94,6 +100,22 @@ const PaymentsProducts = () => {
             <br /> manage business spend, and much more.
           </Typography>
         </Grid>
+        <Box mt={14} pr={4}>
+          <img src={visacard1} alt="" />
+        </Box>
+
+        <Box mt={14}>
+          <img src={pay} alt="" />
+        </Box>
+        <Box pl={4}>
+          <img src={mobpay} alt="" />
+        </Box>
+        <Box sx={{ position: "relative", top: "-120px", left: "50px" }}>
+          <img src={howtopay} alt="" />
+        </Box>
+        <Box sx={{ paddingLeft: "80px", paddingTop: "55px" }}>
+          <img src={graphpay} alt="" />
+        </Box>
       </Grid>
     </>
   );
