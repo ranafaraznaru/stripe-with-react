@@ -2,13 +2,14 @@ import * as React from "react";
 import { Typography, Grid, Button, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import visacard1 from "../src/images/visacard1.png";
+import { ArrowForwardIos } from "@mui/icons-material";
 // import visacard2 from "../src/images/visacard2.png";
 // import visacard3 from "../src/images/visacard3.png";
 import pay from "../src/images/pay.PNG";
 import mobpay from "../src/images/mobpay.png";
 import howtopay from "../src/images/howtopay.png";
 import graphpay from "../src/images/graphpay.PNG";
-import { ArrowForwardIos } from "@mui/icons-material";
+
 const useStyles = makeStyles({
   ArrowSize: {
     fontSize: "14px !important",
