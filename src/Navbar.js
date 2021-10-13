@@ -133,11 +133,11 @@ const Navbar = () => {
         <Grid item xs={12} md={5} pt={4}>
           <Toolbar>
             <Grid item xs={6} pt={5}>
-              <img src={mob1} />
+              <img src={mob1} alt="" />
             </Grid>
 
             <Grid item xs={6}>
-              <img src={mob2} className={classes.mob2Img} />
+              <img src={mob2} className={classes.mob2Img} alt="" />
             </Grid>
           </Toolbar>
         </Grid>{" "}

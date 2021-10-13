@@ -1,5 +1,4 @@
 import * as React from "react";
-import { makeStyles } from "@mui/styles";
 import { Grid } from "@mui/material";
 import instacart from "../src/images/instacartlogo.png";
 import salesforce from "../src/images/salesforcelogo.png";
@@ -15,30 +14,30 @@ const OurClients = () => {
     <>
       <Grid container spacing={2} pl={16} pt={12}>
         <Grid item xs={12} md={3}>
-          <img src={instacart} />
+          <img src={instacart} alt="" />
         </Grid>
         <Grid item xs={12} md={3}>
-          <img src={salesforce} />
+          <img src={salesforce} alt="" />
         </Grid>
         <Grid item xs={12} md={3}>
-          <img src={amazon} />
+          <img src={amazon} alt="" />
         </Grid>
         <Grid item xs={12} md={3}>
-          <img src={slack} />
+          <img src={slack} alt="" />
         </Grid>
       </Grid>
       <Grid container spacing={2} pl={16} pt={4}>
         <Grid item xs={12} md={3}>
-          <img src={shopify} />
+          <img src={shopify} alt="" />
         </Grid>
         <Grid item xs={12} md={3}>
-          <img src={google} />
+          <img src={google} alt="" />
         </Grid>
         <Grid item xs={12} md={3}>
-          <img src={lya} />
+          <img src={lya} alt="" />
         </Grid>
         <Grid item xs={12} md={3}>
-          <img src={zoom} />
+          <img src={zoom} alt="" />
         </Grid>
       </Grid>
     </>
