@@ -35,17 +35,17 @@ const useStyles = makeStyles({
     // position: "relative",
     // clipPath: "polygon(0% 0%, 100% 0%, 100% 30%, 0% 100%)",
   },
-  // Nav: {
-  //   background:
-  //     "linear-gradient(150deg, #a960ee 15%, #ff333d 70%, #90e0ff 94%) !important",
-  // },
+  Nav: {
+    background:
+      "linear-gradient(150deg, #a960ee 15%, #ff333d 70%, #90e0ff 94%) !important",
+  },
 });
 
 const Navbar = () => {
   const classes = useStyles();
   return (
     <div container className={classes.bgGradient}>
-      <AppBar className={classes.Nav}>
+      <AppBar className={classes.Nav} position="static">
         <Toolbar>
           <div style={{ width: "100%" }}>
             <Box sx={{ display: "flex", p: 1 }}>

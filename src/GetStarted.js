@@ -22,7 +22,7 @@ const GetStarted = () => {
 
   return (
     <>
-      <Grid container spacing={2} pt={14}>
+      <Grid container spacing={2} pt={14} pb={10}>
         <Grid item xs={6} sx={{ paddingLeft: "125px !important" }}>
           <Typography
             variant="h4"
