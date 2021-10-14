@@ -22,8 +22,8 @@ const GetStarted = () => {
 
   return (
     <>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
+      <Grid container spacing={2} pt={14}>
+        <Grid item xs={6} sx={{ paddingLeft: "125px !important" }}>
           <Typography
             variant="h4"
             component="div"
@@ -69,9 +69,9 @@ const GetStarted = () => {
             </Button>
           </div>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={6} pl={4}>
           <Box sx={{ display: "flex !important" }}>
-            <Grid>
+            <Grid pr={7} sx={{ paddingLeft: "34px" }}>
               <img src={tagicon} alt="" />
               <Typography
                 variant="body1"

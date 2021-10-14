@@ -6,6 +6,7 @@ import PaymentsProducts from "./PaymentsProducts";
 import DevsApi from "./DevsApi";
 import WhyStripe from "./WhyStripe";
 import GetStarted from "./GetStarted";
+import Footer from "./Footer";
 const App = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const App = () => {
       <DevsApi />
       <WhyStripe />
       <GetStarted />
+      <Footer />
     </>
   );
 };
