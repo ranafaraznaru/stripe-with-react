@@ -4,6 +4,7 @@ import { makeStyles } from "@mui/styles";
 import { ArrowForwardIos } from "@mui/icons-material";
 import tagicon from "../src/images/tagicon.PNG";
 import bracketsicon from "../src/images/bracketsicon.PNG";
+import Bounce from "react-reveal/Bounce";
 
 const useStyles = makeStyles({
   ArrowSize: {
@@ -48,31 +49,38 @@ const GetStarted = () => {
             <br /> your business.
           </Typography>
           <div className={classes.ButtonDiv}>
-            <Button
-              variant="contained"
-              className={classes.paymentsButton}
-              sx={{
-                display: "flex",
-                justifyContent: "flex-end",
-                marginTop: "23px",
-              }}
-            >
-              Start now
-              <ArrowForwardIos className={classes.ArrowSize} />
-            </Button>
-            <Button
-              className={classes.contactButton}
-              sx={{ paddingTop: "31px !important" }}
-            >
-              Contact sales
-              <ArrowForwardIos className={classes.ArrowSize} />
-            </Button>
+            <Bounce left>
+              <Button
+                variant="contained"
+                className={classes.paymentsButton}
+                sx={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  marginTop: "23px",
+                }}
+              >
+                Start now
+                <ArrowForwardIos className={classes.ArrowSize} />
+              </Button>
+            </Bounce>
+            <Bounce right>
+              <Button
+                className={classes.contactButton}
+                sx={{ paddingTop: "31px !important" }}
+              >
+                Contact sales
+                <ArrowForwardIos className={classes.ArrowSize} />
+              </Button>
+            </Bounce>
           </div>
         </Grid>
         <Grid item xs={6} pl={4}>
           <Box sx={{ display: "flex !important" }}>
             <Grid pr={7} sx={{ paddingLeft: "34px" }}>
-              <img src={tagicon} alt="" />
+              <Bounce left>
+                {" "}
+                <img src={tagicon} alt="" />
+              </Bounce>
               <Typography
                 variant="body1"
                 component="div"
@@ -98,7 +106,9 @@ const GetStarted = () => {
               </Typography>
             </Grid>
             <Grid>
-              <img src={bracketsicon} alt="" />
+              <Bounce right>
+                <img src={bracketsicon} alt="" />
+              </Bounce>
               <Typography
                 variant="body1"
                 component="div"

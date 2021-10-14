@@ -9,6 +9,7 @@ import pay from "../src/images/pay.PNG";
 import mobpay from "../src/images/mobpay.png";
 import howtopay from "../src/images/howtopay.png";
 import graphpay from "../src/images/graphpay.PNG";
+import Zoom from "react-reveal/Zoom";
 
 const useStyles = makeStyles({
   ArrowSize: {
@@ -71,18 +72,20 @@ const PaymentsProducts = () => {
             </span>{" "}
             and everything in between.
           </Typography>
-          <Button
-            variant="contained"
-            className={classes.paymentsButton}
-            sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              marginTop: "23px",
-            }}
-          >
-            Start with payments
-            <ArrowForwardIos className={classes.ArrowSize} />
-          </Button>
+          <Zoom>
+            <Button
+              variant="contained"
+              className={classes.paymentsButton}
+              sx={{
+                display: "flex",
+                justifyContent: "flex-end",
+                marginTop: "23px",
+              }}
+            >
+              Start with payments
+              <ArrowForwardIos className={classes.ArrowSize} />
+            </Button>
+          </Zoom>
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography

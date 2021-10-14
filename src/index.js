@@ -7,6 +7,7 @@ import DevsApi from "./DevsApi";
 import WhyStripe from "./WhyStripe";
 import GetStarted from "./GetStarted";
 import Footer from "./Footer";
+
 const App = () => {
   return (
     <>

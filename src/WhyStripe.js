@@ -4,7 +4,7 @@ import circleicon from "../src/images/circleicon.PNG";
 import playicon from "../src/images/playicon.PNG";
 import tradingicon from "../src/images/tradingicon.PNG";
 import settingicon from "../src/images/settingicon.PNG";
-
+import RubberBand from "react-reveal/RubberBand";
 const WhyStripe = () => {
   return (
     <>
@@ -37,7 +37,9 @@ const WhyStripe = () => {
             }}
           >
             <Box xs={3}>
-              <img src={circleicon} alt="" />
+              <RubberBand>
+                <img src={circleicon} alt="" />
+              </RubberBand>
               <Typography
                 variant="h6"
                 component="div"
@@ -61,8 +63,9 @@ const WhyStripe = () => {
               </Typography>
             </Box>
             <Box xs={3} pl={4}>
-              <img src={playicon} alt="" />
-
+              <RubberBand>
+                <img src={playicon} alt="" />
+              </RubberBand>
               <Typography
                 variant="h6"
                 component="div"
@@ -90,8 +93,9 @@ const WhyStripe = () => {
               </Typography>
             </Box>
             <Box xs={3} pl={4}>
-              <img src={tradingicon} alt="" />
-
+              <RubberBand>
+                <img src={tradingicon} alt="" />
+              </RubberBand>
               <Typography
                 variant="h6"
                 component="div"
@@ -115,7 +119,9 @@ const WhyStripe = () => {
               </Typography>
             </Box>
             <Box xs={3}>
-              <img src={settingicon} alt="" />
+              <RubberBand>
+                <img src={settingicon} alt="" />
+              </RubberBand>
 
               <Typography
                 variant="h6"

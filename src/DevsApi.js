@@ -6,6 +6,10 @@ import terminalicon from "../src/images/terminalicon.png";
 import boxicon from "../src/images/boxicon.png";
 import codeimg from "../src/images/codeimg.PNG";
 import outputimg from "../src/images/outputimg.PNG";
+import RubberBand from "react-reveal/RubberBand";
+import Zoom from "react-reveal/Zoom";
+import Bounce from "react-reveal/Bounce";
+
 const useStyles = makeStyles({
   ArrowSize: {
     fontSize: "14px !important",
@@ -72,21 +76,25 @@ const DevsApi = () => {
             need to stitch together disparate systems or <br /> spend months
             integrating payments functionality.
           </Typography>
-          <Button
-            variant="contained"
-            className={classes.paymentsButton}
-            sx={{
-              display: "flex",
-              justifyContent: "flex-end",
-              marginTop: "23px",
-            }}
-          >
-            Read the docs
-            <ArrowForwardIos className={classes.ArrowSize} />
-          </Button>
+          <Zoom>
+            <Button
+              variant="contained"
+              className={classes.paymentsButton}
+              sx={{
+                display: "flex",
+                justifyContent: "flex-end",
+                marginTop: "23px",
+              }}
+            >
+              Read the docs
+              <ArrowForwardIos className={classes.ArrowSize} />
+            </Button>
+          </Zoom>
           <div className={classes.IconsDiv}>
             <Grid item sx={{ paddingTop: "50px" }}>
-              <img src={terminalicon} alt="" />
+              <RubberBand>
+                <img src={terminalicon} alt="" />
+              </RubberBand>
               <Typography
                 variant="h6"
                 component="div"
@@ -107,16 +115,20 @@ const DevsApi = () => {
                   <br /> React and PHP to .NET and iOS.
                 </Typography>
               </Typography>
-              <Button
-                className={classes.seelibButton}
-                sx={{ paddingTop: "15px" }}
-              >
-                See libraries
-                <ArrowForwardIos className={classes.ArrowlibButton} />
-              </Button>
+              <Bounce left>
+                <Button
+                  className={classes.seelibButton}
+                  sx={{ paddingTop: "15px" }}
+                >
+                  See libraries
+                  <ArrowForwardIos className={classes.ArrowlibButton} />
+                </Button>
+              </Bounce>
             </Grid>
             <Grid item pl={4} sx={{ paddingTop: "50px" }}>
-              <img src={boxicon} alt="" />
+              <RubberBand>
+                <img src={boxicon} alt="" />
+              </RubberBand>
               <Typography variant="h6" component="div" sx={{ color: "white" }}>
                 Prebuilt integrations
                 <Typography
@@ -133,13 +145,15 @@ const DevsApi = () => {
                   <br /> NetSuite, and more.
                 </Typography>
               </Typography>
-              <Button
-                className={classes.seelibButton}
-                sx={{ paddingTop: "18px" }}
-              >
-                Explore partners
-                <ArrowForwardIos className={classes.ArrowlibButton} />
-              </Button>
+              <Bounce right>
+                <Button
+                  className={classes.seelibButton}
+                  sx={{ paddingTop: "18px" }}
+                >
+                  Explore partners
+                  <ArrowForwardIos className={classes.ArrowlibButton} />
+                </Button>
+              </Bounce>
             </Grid>
           </div>
         </Grid>

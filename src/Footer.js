@@ -13,7 +13,7 @@ const Footer = () => {
   const classes = useStyles();
   return (
     <>
-      <div className={classes.MainDiv}>
+      <div className={`${classes.MainDiv} `}>
         <Grid
           pb={14}
           container
@@ -50,7 +50,7 @@ const Footer = () => {
               <CopyrightSharpIcon
                 fontSize="small"
                 pt={2}
-                sx={{ marginTop: "6px" }}
+                sx={{ marginTop: "6px", color: "#3E5469" }}
               />
 
               <Typography variant="h6" sx={{ color: "#3E5469" }} pl={1}>
