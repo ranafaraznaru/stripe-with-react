@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Button, Box } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import SmsFailedSharpIcon from "@mui/icons-material/SmsFailedSharp";
 import CopyrightSharpIcon from "@mui/icons-material/CopyrightSharp";

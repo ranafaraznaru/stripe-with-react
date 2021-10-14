@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Button, Box } from "@mui/material";
+import { Grid, Typography, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { ArrowForwardIos } from "@mui/icons-material";
 import terminalicon from "../src/images/terminalicon.png";
