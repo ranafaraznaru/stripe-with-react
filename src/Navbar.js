@@ -1,14 +1,13 @@
 import * as React from "react";
-import { makeStyles } from "@mui/styles";
-import { ArrowForwardIos } from "@mui/icons-material";
-import { Grid, AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
-import mob1 from "../src/images/mob1.jpg";
-import mob2 from "../src/images/mob2.jpg";
-import HeadShake from "react-reveal/HeadShake";
+import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
 import Bounce from "react-reveal/Bounce";
-import Reveal from "react-reveal/Reveal";
+import { makeStyles } from "@mui/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import { ArrowForwardIos } from "@mui/icons-material";
 import Zoom from "react-reveal/Zoom";
-const useStyles = makeStyles({
+
+const useStyles = makeStyles((theme) => ({
   signinButton: {
     borderRadius: "20px !important",
     backgroundColor: "hsla(0,0%,100%,0.2) !important",
@@ -16,39 +15,19 @@ const useStyles = makeStyles({
   ArrowSize: {
     fontSize: "14px !important",
   },
-  mob2Img: {
-    position: "absolute",
-    left: 317,
-    top: 57,
-  },
-  startnowButton: {
-    borderRadius: "20px !important",
-    backgroundColor: "#0A2540 !important",
-    marginLeft: "38px !important",
-  },
-  contactButton: {
-    marginLeft: "10px !important",
-    color: "#0a2540 !important",
-    fontWeight: "600 !important",
-  },
-  bgGradient: {
-    background:
-      "linear-gradient(150deg, #a960ee 15%, #ff333d 70%, #90e0ff 94%, #ffcb57 80%) !important",
-    // width: "100%",
-    // height: "100vh",
-    // position: "relative",
-    // clipPath: "polygon(0% 0%, 100% 0%, 100% 30%, 0% 100%)",
-  },
+
   Nav: {
     background:
       "linear-gradient(150deg, #a960ee 15%, #ff333d 70%, #90e0ff 94%) !important",
   },
-});
+}));
 
 const Navbar = () => {
   const classes = useStyles();
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <div container className={classes.bgGradient}>
+    <>
       <AppBar className={classes.Nav} position="static">
         <Toolbar>
           <div style={{ width: "100%" }}>
@@ -68,43 +47,45 @@ const Navbar = () => {
                 </Typography>
               </Box>
 
-              <Box sx={{ flexGrow: 1, display: "flex" }}>
-                <Zoom>
-                  <Box
-                    sx={{ pt: 2, px: 2, font: "caption", fontWeight: "bold" }}
-                  >
-                    Products
-                  </Box>
-                </Zoom>
-                <Zoom>
-                  <Box
-                    sx={{ pt: 2, px: 2, font: "caption", fontWeight: "bold" }}
-                  >
-                    Use cases
-                  </Box>
-                </Zoom>
-                <Zoom>
-                  <Box
-                    sx={{ pt: 2, px: 2, font: "caption", fontWeight: "bold" }}
-                  >
-                    Developers
-                  </Box>
-                </Zoom>
-                <Zoom>
-                  <Box
-                    sx={{ pt: 2, px: 2, font: "caption", fontWeight: "bold" }}
-                  >
-                    Company
-                  </Box>
-                </Zoom>
-                <Zoom>
-                  <Box
-                    sx={{ pt: 2, px: 2, font: "caption", fontWeight: "bold" }}
-                  >
-                    Pricing
-                  </Box>
-                </Zoom>
-              </Box>
+              {!isSmallScreen ? (
+                <Box sx={{ flexGrow: 1, display: "flex" }}>
+                  <Zoom>
+                    <Box
+                      sx={{ pt: 2, px: 2, font: "caption", fontWeight: "bold" }}
+                    >
+                      Products
+                    </Box>
+                  </Zoom>
+                  <Zoom>
+                    <Box
+                      sx={{ pt: 2, px: 2, font: "caption", fontWeight: "bold" }}
+                    >
+                      Use cases
+                    </Box>
+                  </Zoom>
+                  <Zoom>
+                    <Box
+                      sx={{ pt: 2, px: 2, font: "caption", fontWeight: "bold" }}
+                    >
+                      Developers
+                    </Box>
+                  </Zoom>
+                  <Zoom>
+                    <Box
+                      sx={{ pt: 2, px: 2, font: "caption", fontWeight: "bold" }}
+                    >
+                      Company
+                    </Box>
+                  </Zoom>
+                  <Zoom>
+                    <Box
+                      sx={{ pt: 2, px: 2, font: "caption", fontWeight: "bold" }}
+                    >
+                      Pricing
+                    </Box>
+                  </Zoom>
+                </Box>
+              ) : null}
 
               <Box sx={{ p: 1 }}>
                 {" "}
@@ -123,65 +104,7 @@ const Navbar = () => {
           </div>
         </Toolbar>
       </AppBar>
-
-      <Grid container>
-        <Grid item xs={12} md={7}>
-          <div>
-            <Zoom>
-              <Typography
-                variant="h1"
-                component="div"
-                gutterBottom
-                pl={8}
-                pt={16}
-                sx={{ text: "bold", fontWeight: "600" }}
-              >
-                Payments infrastructure for the internet
-              </Typography>
-            </Zoom>
-            <Zoom>
-              <Typography
-                variant="h6"
-                pl={8}
-                sx={{ color: "#85919d", fontWeight: "400", lineHeight: "1.3" }}
-              >
-                Millions of companies of all sizes—from startups to Fortune
-                <br /> 500s—use Stripe’s software and APIs to accept payments,
-                <br /> send payouts, and manage their businesses online.
-              </Typography>
-            </Zoom>
-            <Toolbar sx={{ marginTop: "20px" }}>
-              <HeadShake>
-                <Button variant="contained" className={classes.startnowButton}>
-                  Start now
-                  <ArrowForwardIos className={classes.ArrowSize} />
-                </Button>
-                <Button className={classes.contactButton}>
-                  Contact sales
-                  <ArrowForwardIos className={classes.ArrowSize} />
-                </Button>
-              </HeadShake>
-            </Toolbar>
-          </div>
-        </Grid>
-        <Grid item xs={12} md={5} pt={4}>
-          <Toolbar>
-            <Zoom>
-              <Grid item xs={6} pt={5}>
-                <img src={mob1} alt="" />
-              </Grid>
-            </Zoom>
-            <Grid item xs={6}>
-              <Zoom>
-                <img src={mob2} className={classes.mob2Img} alt="" />
-              </Zoom>
-            </Grid>
-          </Toolbar>
-        </Grid>{" "}
-      </Grid>
-    </div>
+    </>
   );
 };
 export default Navbar;
-// "start": "react-scripts start",
-// "start": "webpack-dev-server --env.ENVIRONMENT=development --content-base src/ --mode development --watch --watch-poll",

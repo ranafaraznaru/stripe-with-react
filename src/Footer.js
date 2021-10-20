@@ -20,7 +20,7 @@ const Footer = () => {
           spacing={2}
           sx={{ paddingTop: "80px", paddingLeft: "138px" }}
         >
-          <Grid item xs={3}>
+          <Grid item xs={12} md={3}>
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>
               Stripe
             </Typography>
@@ -58,7 +58,7 @@ const Footer = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={3} sx={{ paddingTop: "27px" }}>
+          <Grid item xs={12} md={3} sx={{ paddingTop: "27px" }}>
             <Typography
               variant="body1"
               sx={{ fontWeight: "600", color: "#3E5469", paddingTop: "6px" }}
@@ -185,7 +185,7 @@ const Footer = () => {
               Treasury
             </Typography>
           </Grid>
-          <Grid item xs={3} sx={{ paddingTop: "23px" }}>
+          <Grid item xs={12} md={3} sx={{ paddingTop: "23px" }}>
             <Typography
               variant="body1"
               sx={{ fontWeight: "600", color: "#3E5469", paddingTop: "6px" }}
@@ -278,7 +278,7 @@ const Footer = () => {
               Sessions
             </Typography>
           </Grid>
-          <Grid item xs={3} sx={{ paddingTop: "23px" }}>
+          <Grid item xs={12} md={3} sx={{ paddingTop: "23px" }}>
             <Typography
               variant="body1"
               sx={{ fontWeight: "600", color: "#3E5469", paddingTop: "9px" }}
