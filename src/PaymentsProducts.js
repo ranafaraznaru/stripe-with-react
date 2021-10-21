@@ -158,14 +158,14 @@ const PaymentsProducts = () => {
             <img src={mobpay} alt="" />
           </Box>
         </Roll>
-        <Roll left delay={4000}>
+        <Roll left delay={3000}>
           <Box className={classes.HowTopPay}>
             <img src={howtopay} alt="" />
           </Box>
         </Roll>
 
         {!isSmallScreen ? (
-          <Roll bottom delay={5000}>
+          <Roll bottom delay={1000}>
             <Box sx={{ paddingLeft: "80px", paddingTop: "55px" }}>
               <img src={graphpay} alt="" />
             </Box>

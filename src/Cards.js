@@ -15,6 +15,11 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "space-evenly",
     },
   },
+  customizeCard: {
+    [theme.breakpoints.down("md")]: {
+      marginRight: "35px",
+    },
+  },
 }));
 const Cards = () => {
   const classes = useStyles();
@@ -27,7 +32,7 @@ const Cards = () => {
           paddingLeft: "50px",
         }}
       >
-        <Card sx={{ minWidth: 275, marginBottom: "20px" }}>
+        <Card sx={{ marginBottom: "20px" }} className={classes.customizeCard}>
           <CardContent>
             <RubberBand>
               <img src={circleicon} alt="" />
@@ -56,7 +61,7 @@ const Cards = () => {
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 275, marginBottom: "20px" }}>
+        <Card sx={{ marginBottom: "20px" }} className={classes.customizeCard}>
           <CardContent>
             <RubberBand>
               <img src={playicon} alt="" />
@@ -89,7 +94,7 @@ const Cards = () => {
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 275, marginBottom: "20px" }}>
+        <Card sx={{ marginBottom: "20px" }} className={classes.customizeCard}>
           <CardContent>
             <RubberBand>
               <img src={tradingicon} alt="" />
@@ -118,7 +123,7 @@ const Cards = () => {
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 275, marginBottom: "20px" }}>
+        <Card sx={{ marginBottom: "20px" }} className={classes.customizeCard}>
           <CardContent>
             <RubberBand>
               <img src={settingicon} alt="" />

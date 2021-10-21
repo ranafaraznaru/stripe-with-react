@@ -16,10 +16,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px !important",
   },
 
-  Nav: {
-    background:
-      "linear-gradient(150deg, #a960ee 15%, #ff333d 70%, #90e0ff 94%) !important",
-  },
+  // Nav: {
+  //   background:
+  //     "linear-gradient(150deg, #a960ee 15%, #ff333d 70%, #90e0ff 94%) !important",
+  // },
 }));
 
 const Navbar = () => {

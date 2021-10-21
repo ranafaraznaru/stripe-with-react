@@ -33,14 +33,14 @@ const useStyles = makeStyles((theme) => ({
     color: "#0a2540 !important",
     fontWeight: "600 !important",
   },
-  bgGradient: {
-    background:
-      "linear-gradient(150deg, #a960ee 15%, #ff333d 70%, #90e0ff 94%, #ffcb57 80%) !important",
-    // width: "100%",
-    // height: "100vh",
-    // position: "relative",
-    // clipPath: "polygon(0% 0%, 100% 0%, 100% 30%, 0% 100%)",
-  },
+  // bgGradient: {
+  //   background:
+  //     "linear-gradient(150deg, #a960ee 15%, #ff333d 70%, #90e0ff 94%, #ffcb57 80%) !important",
+  //   // width: "100%",
+  //   // height: "100vh",
+  //   // position: "relative",
+  //   // clipPath: "polygon(0% 0%, 100% 0%, 100% 30%, 0% 100%)",
+  // },
   mainHeading: {
     text: "bold !important",
     fontWeight: "600 !important",
