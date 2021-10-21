@@ -10,6 +10,7 @@ import lya from "../src/images/lyalogo.png";
 import zoom from "../src/images/zoomlogo.png";
 import { useTheme } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
+import Bounce from "react-reveal/Bounce";
 const useStyles = makeStyles((theme) => ({
   FirstRow: {
     [theme.breakpoints.down("md")]: {
@@ -34,34 +35,36 @@ const OurClients = () => {
 
   return (
     <>
-      <Grid container spacing={2} pt={12} className={classes.FirstRow}>
-        <Grid item xs={6} md={3}>
-          <img src={instacart} alt="" />
+      <Bounce>
+        <Grid container spacing={2} pt={12} className={classes.FirstRow}>
+          <Grid item xs={6} md={3}>
+            <img src={instacart} alt="" />
+          </Grid>
+          <Grid item xs={6} md={3}>
+            <img src={salesforce} alt="" />
+          </Grid>
+          <Grid item xs={6} md={3}>
+            <img src={amazon} alt="" />
+          </Grid>
+          <Grid item xs={6} md={3}>
+            <img src={slack} alt="" />
+          </Grid>
         </Grid>
-        <Grid item xs={6} md={3}>
-          <img src={salesforce} alt="" />
+        <Grid container spacing={2} pt={4} className={classes.SecondRow}>
+          <Grid item xs={6} md={3}>
+            <img src={shopify} alt="" />
+          </Grid>
+          <Grid item xs={6} md={3}>
+            <img src={google} alt="" />
+          </Grid>
+          <Grid item xs={6} md={3}>
+            <img src={lya} alt="" />
+          </Grid>
+          <Grid item xs={6} md={3}>
+            <img src={zoom} alt="" />
+          </Grid>
         </Grid>
-        <Grid item xs={6} md={3}>
-          <img src={amazon} alt="" />
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <img src={slack} alt="" />
-        </Grid>
-      </Grid>
-      <Grid container spacing={2} pt={4} className={classes.SecondRow}>
-        <Grid item xs={6} md={3}>
-          <img src={shopify} alt="" />
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <img src={google} alt="" />
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <img src={lya} alt="" />
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <img src={zoom} alt="" />
-        </Grid>
-      </Grid>
+      </Bounce>
     </>
   );
 };

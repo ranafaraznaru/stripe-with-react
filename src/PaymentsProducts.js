@@ -10,7 +10,7 @@ import graphpay from "../src/images/graphpay.PNG";
 import Zoom from "react-reveal/Zoom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-
+import Roll from "react-reveal/Roll";
 const useStyles = makeStyles((theme) => ({
   ArrowSize: {
     fontSize: "14px !important",
@@ -143,23 +143,33 @@ const PaymentsProducts = () => {
             </Typography>
           </div>
         </Grid>
-        <Box mt={14} pr={4}>
-          <img src={visacard1} alt="" />
-        </Box>
-
-        <Box mt={14}>
-          <img src={pay} alt="" className={classes.Payimg} />
-        </Box>
-        <Box className={classes.MobPay}>
-          <img src={mobpay} alt="" />
-        </Box>
-        <Box className={classes.HowTopPay}>
-          <img src={howtopay} alt="" />
-        </Box>
-        {!isSmallScreen ? (
-          <Box sx={{ paddingLeft: "80px", paddingTop: "55px" }}>
-            <img src={graphpay} alt="" />
+        <Roll left delay={1000}>
+          <Box mt={14} pr={4}>
+            <img src={visacard1} alt="" />
           </Box>
+        </Roll>
+        <Roll top delay={2000}>
+          <Box mt={14}>
+            <img src={pay} alt="" className={classes.Payimg} />
+          </Box>
+        </Roll>
+        <Roll right delay={3000}>
+          <Box className={classes.MobPay}>
+            <img src={mobpay} alt="" />
+          </Box>
+        </Roll>
+        <Roll left delay={4000}>
+          <Box className={classes.HowTopPay}>
+            <img src={howtopay} alt="" />
+          </Box>
+        </Roll>
+
+        {!isSmallScreen ? (
+          <Roll bottom delay={5000}>
+            <Box sx={{ paddingLeft: "80px", paddingTop: "55px" }}>
+              <img src={graphpay} alt="" />
+            </Box>
+          </Roll>
         ) : null}
       </Grid>
     </>
