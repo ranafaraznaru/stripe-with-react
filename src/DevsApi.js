@@ -9,8 +9,7 @@ import outputimg from "../src/images/outputimg.PNG";
 import RubberBand from "react-reveal/RubberBand";
 import Zoom from "react-reveal/Zoom";
 import Bounce from "react-reveal/Bounce";
-
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   ArrowSize: {
     fontSize: "14px !important",
     color: "black",
@@ -29,20 +28,45 @@ const useStyles = makeStyles({
     color: "#02bcf5 !important",
   },
   IconsDiv: {
-    display: "flex",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+    },
   },
-});
+  Prebuilt: {
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: "32px",
+    },
+  },
+  CodeImg: {
+    [theme.breakpoints.down("md")]: {
+      width: "410px",
+    },
+  },
+  OutputImg: {
+    [theme.breakpoints.down("md")]: {
+      width: "410px",
+    },
+  },
+  DevsApi: {
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: "150px !important",
+    },
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "70px !important",
+    },
+  },
+}));
 const DevsApi = () => {
   const classes = useStyles();
-
   return (
     <>
       <Grid pb={16} container spacing={2} sx={{ backgroundColor: "#0a2540" }}>
         <Grid
+          className={classes.DevsApi}
           item
-          xs={6}
+          xs={12}
+          md={6}
           sx={{
-            paddingLeft: "150px !important",
             paddingTop: "90px !important",
           }}
         >
@@ -91,7 +115,7 @@ const DevsApi = () => {
             </Button>
           </Zoom>
           <div className={classes.IconsDiv}>
-            <Grid item sx={{ paddingTop: "50px" }}>
+            <Grid xs={12} md={6} item sx={{ paddingTop: "50px" }}>
               <RubberBand>
                 <img src={terminalicon} alt="" />
               </RubberBand>
@@ -125,7 +149,13 @@ const DevsApi = () => {
                 </Button>
               </Bounce>
             </Grid>
-            <Grid item pl={4} sx={{ paddingTop: "50px" }}>
+            <Grid
+              xs={12}
+              md={6}
+              item
+              sx={{ paddingTop: "50px" }}
+              className={classes.Prebuilt}
+            >
               <RubberBand>
                 <img src={boxicon} alt="" />
               </RubberBand>
@@ -158,9 +188,9 @@ const DevsApi = () => {
           </div>
         </Grid>
 
-        <Grid item xs={6} sx={{ paddingTop: "95px !important" }}>
-          <img src={codeimg} alt="" />
-          <img src={outputimg} alt="" />
+        <Grid item xs={12} md={6} sx={{ paddingTop: "95px !important" }}>
+          <img src={codeimg} alt="" className={classes.CodeImg} />
+          <img src={outputimg} alt="" className={classes.OutputImg} />
         </Grid>
       </Grid>
     </>

@@ -7,17 +7,26 @@ import mob2 from "../src/images/mob2.jpg";
 import HeadShake from "react-reveal/HeadShake";
 import Zoom from "react-reveal/Zoom";
 import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   mob2Img: {
-    position: "absolute",
-    left: 317,
-    top: 57,
+    [theme.breakpoints.up("md")]: {
+      position: "absolute",
+      left: 317,
+      top: 57,
+    },
   },
   startnowButton: {
     borderRadius: "20px !important",
     backgroundColor: "#0A2540 !important",
-    marginLeft: "38px !important",
+
+    [theme.breakpoints.up("md")]: {
+      marginLeft: "38px !important",
+    },
+    [theme.breakpoints.down("md")]: {
+      marginLeft: "15px !important",
+    },
   },
   contactButton: {
     marginLeft: "10px !important",
@@ -37,6 +46,17 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "600 !important",
     [theme.breakpoints.down("md")]: {
       fontSize: "3rem !important",
+      paddingLeft: "32px !important",
+    },
+  },
+  subText: {
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "32px !important",
+    },
+  },
+  ArrowSize: {
+    [theme.breakpoints.down("md")]: {
+      fontSize: "15px !important",
     },
   },
 }));
@@ -45,7 +65,7 @@ const MainPage = () => {
   const theme = useTheme();
   const classes = useStyles(theme);
 
-  // const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div container className={classes.bgGradient}>
       <Grid container>
@@ -67,6 +87,7 @@ const MainPage = () => {
 
             <Zoom delay={1000}>
               <Typography
+                className={classes.subText}
                 xs={12}
                 variant="h6"
                 pl={8}
@@ -96,20 +117,29 @@ const MainPage = () => {
             </Toolbar>
           </div>
         </Grid>
-        <Grid item xs={12} md={5} pt={4}>
-          <Toolbar>
-            <Zoom delay={1000}>
-              <Grid item xs={12} md={6} pt={5}>
-                <img src={mob1} alt="" />
-              </Grid>
-            </Zoom>
-            <Grid item xs={12} md={6}>
-              <Zoom delay={2000}>
-                <img src={mob2} className={classes.mob2Img} alt="" />
+        {!isSmallScreen ? (
+          <Grid item xs={12} md={5} pt={4}>
+            <Toolbar>
+              <Zoom delay={1000}>
+                <Grid
+                  item
+                  xs={12}
+                  sm={12}
+                  md={6}
+                  order={{ xs: 1, sm: 1 }}
+                  pt={5}
+                >
+                  <img src={mob1} alt="" />
+                </Grid>
               </Zoom>
-            </Grid>
-          </Toolbar>
-        </Grid>{" "}
+              <Grid item xs={12} sm={12} md={6} order={{ xs: 2, sm: 2 }}>
+                <Zoom delay={2000}>
+                  <img src={mob2} className={classes.mob2Img} alt="" />
+                </Zoom>
+              </Grid>
+            </Toolbar>
+          </Grid>
+        ) : null}
       </Grid>
     </div>
   );

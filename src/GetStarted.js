@@ -5,26 +5,56 @@ import { ArrowForwardIos } from "@mui/icons-material";
 import tagicon from "../src/images/tagicon.PNG";
 import bracketsicon from "../src/images/bracketsicon.PNG";
 import Bounce from "react-reveal/Bounce";
-
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   ArrowSize: {
     fontSize: "14px !important",
+  },
+  getStarted: {
+    [theme.breakpoints.up("md")]: {
+      display: "flex !important",
+    },
   },
   paymentsButton: {
     borderRadius: "20px !important",
     backgroundColor: "#635bff !important",
+    [theme.breakpoints.up("up")]: {
+      display: "flex",
+      justifyContent: "flex-end",
+    },
   },
   ButtonDiv: {
     display: "flex",
   },
-});
+  textGrid: {
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: "125px !important",
+    },
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "70px !important",
+    },
+  },
+  whatYouPay: {
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: "34px",
+    },
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "47px",
+      paddingTop: "35px",
+    },
+  },
+  yourIntegration: {
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "47px",
+      paddingTop: "35px",
+    },
+  },
+}));
 const GetStarted = () => {
   const classes = useStyles();
-
   return (
     <>
       <Grid container spacing={2} pt={14} pb={10}>
-        <Grid item xs={6} sx={{ paddingLeft: "125px !important" }}>
+        <Grid item xs={12} md={6} className={classes.textGrid}>
           <Typography
             variant="h4"
             component="div"
@@ -54,8 +84,6 @@ const GetStarted = () => {
                 variant="contained"
                 className={classes.paymentsButton}
                 sx={{
-                  display: "flex",
-                  justifyContent: "flex-end",
                   marginTop: "23px",
                 }}
               >
@@ -74,9 +102,9 @@ const GetStarted = () => {
             </Bounce>
           </div>
         </Grid>
-        <Grid item xs={6} pl={4}>
-          <Box sx={{ display: "flex !important" }}>
-            <Grid pr={7} sx={{ paddingLeft: "34px" }}>
+        <Grid item xs={12} md={6} pl={4}>
+          <Box className={classes.getStarted}>
+            <Grid pr={7} className={classes.whatYouPay}>
               <Bounce left>
                 {" "}
                 <img src={tagicon} alt="" />
@@ -105,7 +133,7 @@ const GetStarted = () => {
                 Integrated per-transaction <br /> pricing with no hidden fees.
               </Typography>
             </Grid>
-            <Grid>
+            <Grid className={classes.yourIntegration}>
               <Bounce right>
                 <img src={bracketsicon} alt="" />
               </Bounce>

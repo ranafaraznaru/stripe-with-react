@@ -4,23 +4,32 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import SmsFailedSharpIcon from "@mui/icons-material/SmsFailedSharp";
 import CopyrightSharpIcon from "@mui/icons-material/CopyrightSharp";
 import { makeStyles } from "@mui/styles";
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   MainDiv: {
     backgroundColor: "#F6F9FC",
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: "138px",
+    },
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "48px",
+    },
   },
-});
+  footerIcon: {
+    [theme.breakpoints.up("md")]: {
+      paddingTop: "374px",
+    },
+    [theme.breakpoints.down("md")]: {
+      paddingTop: "50px",
+    },
+  },
+}));
 const Footer = () => {
   const classes = useStyles();
   return (
     <>
       <div className={`${classes.MainDiv} `}>
-        <Grid
-          pb={14}
-          container
-          spacing={2}
-          sx={{ paddingTop: "80px", paddingLeft: "138px" }}
-        >
-          <Grid item xs={12} md={3}>
+        <Grid pb={14} container spacing={2} sx={{ paddingTop: "80px" }}>
+          <Grid item xs={6} md={3}>
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>
               Stripe
             </Typography>
@@ -46,7 +55,7 @@ const Footer = () => {
                 English (United states)
               </Typography>
             </Box>
-            <Box sx={{ display: "flex", paddingTop: "374px" }}>
+            <Box sx={{ display: "flex" }} className={classes.footerIcon}>
               <CopyrightSharpIcon
                 fontSize="small"
                 pt={2}
@@ -58,7 +67,7 @@ const Footer = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={12} md={3} sx={{ paddingTop: "27px" }}>
+          <Grid item xs={6} md={3} sx={{ paddingTop: "27px" }}>
             <Typography
               variant="body1"
               sx={{ fontWeight: "600", color: "#3E5469", paddingTop: "6px" }}
@@ -185,7 +194,7 @@ const Footer = () => {
               Treasury
             </Typography>
           </Grid>
-          <Grid item xs={12} md={3} sx={{ paddingTop: "23px" }}>
+          <Grid item xs={6} md={3} sx={{ paddingTop: "23px" }}>
             <Typography
               variant="body1"
               sx={{ fontWeight: "600", color: "#3E5469", paddingTop: "6px" }}
@@ -278,7 +287,7 @@ const Footer = () => {
               Sessions
             </Typography>
           </Grid>
-          <Grid item xs={12} md={3} sx={{ paddingTop: "23px" }}>
+          <Grid item xs={6} md={3} sx={{ paddingTop: "23px" }}>
             <Typography
               variant="body1"
               sx={{ fontWeight: "600", color: "#3E5469", paddingTop: "9px" }}

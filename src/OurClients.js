@@ -8,35 +8,57 @@ import shopify from "../src/images/shopifylogo.png";
 import google from "../src/images/googlelogo.png";
 import lya from "../src/images/lyalogo.png";
 import zoom from "../src/images/zoomlogo.png";
-
+import { useTheme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles";
+const useStyles = makeStyles((theme) => ({
+  FirstRow: {
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "35px",
+    },
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: "128px",
+    },
+  },
+  SecondRow: {
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "35px",
+    },
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: "128px",
+    },
+  },
+}));
 const OurClients = () => {
+  const theme = useTheme();
+  const classes = useStyles(theme);
+
   return (
     <>
-      <Grid container spacing={2} pl={16} pt={12}>
-        <Grid item xs={12} md={3}>
+      <Grid container spacing={2} pt={12} className={classes.FirstRow}>
+        <Grid item xs={6} md={3}>
           <img src={instacart} alt="" />
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={6} md={3}>
           <img src={salesforce} alt="" />
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={6} md={3}>
           <img src={amazon} alt="" />
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={6} md={3}>
           <img src={slack} alt="" />
         </Grid>
       </Grid>
-      <Grid container spacing={2} pl={16} pt={4}>
-        <Grid item xs={12} md={3}>
+      <Grid container spacing={2} pt={4} className={classes.SecondRow}>
+        <Grid item xs={6} md={3}>
           <img src={shopify} alt="" />
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={6} md={3}>
           <img src={google} alt="" />
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={6} md={3}>
           <img src={lya} alt="" />
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={6} md={3}>
           <img src={zoom} alt="" />
         </Grid>
       </Grid>
