@@ -6,7 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { ArrowForwardIos } from "@mui/icons-material";
 import Zoom from "react-reveal/Zoom";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   signinButton: {
     borderRadius: "20px !important",
@@ -95,7 +95,8 @@ const Navbar = () => {
                     className={classes.signinButton}
                     sx={{ display: "flex", justifyContent: "flex-end" }}
                   >
-                    <Link to="/signin">Sign in</Link>
+                    Sign in
+                    {/* <Link to="/signin">Sign in</Link> */}
                     <ArrowForwardIos className={classes.ArrowSize} />
                   </Button>
                 </Bounce>
